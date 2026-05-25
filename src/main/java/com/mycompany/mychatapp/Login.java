@@ -24,8 +24,7 @@ public class Login {
     }
    
     //Allows creating a Login objecct with these specified values
-    
-    public Login(String username, String password, String phonenumber){
+     public Login(String username, String password, String phonenumber){
         this.username = username;
         this.password = password;
     }
@@ -72,7 +71,7 @@ public class Login {
     */
     
     public boolean checkCellPhoneNumber(String phone){
-        return phone.startsWith("+27" ) && phone.length()<=12;
+        return phone.startsWith("+27" ) && phone.length()>=12;
     }
     
     /* This registration method signs up new users for the application
@@ -114,7 +113,7 @@ public class Login {
     */
     public String returnLoginStatus(boolean success){
         if(success){
-           return "Welcome " + username +  "it is great to see you again";
+           return "Welcome " + username +  " it is great to see you again";
                    
         }else {
             return "username or password incorrect, please try again";
